@@ -24,7 +24,7 @@ const renderQuestion = (question) => {
       {choices.map((choice, index) => (
         <div
           key={choice}
-          className={solution === index ? 'choice reivew solution' : 'choice review'}>
+          className={solution === index ? 'choice review solution' : 'choice review'}>
           <p>{renderMarkup(choice)}</p>
         </div>
       ))}
@@ -62,14 +62,8 @@ class Review extends React.Component {
 				<div className='studyContainer'>
           <div className='quizHeader'>
             <div className='quizTitle'>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fccLink"
-                href="http://freecodecamp.com/">
-                <img src="/assets/freeCodeCamp.png" alt="freeCodeCamp Logo" />
-              </a>
-              <span>{quiz.get('title')}</span>
+              <span>{quiz.get('title')} Overview</span>
+              <span style={{ marginLeft: 10 }}>🧙‍♂️</span>
             </div>
             <h3 className='quizMeta'>
               {challenges.size > 1 ? `${challenges.size} total questions` : ''}

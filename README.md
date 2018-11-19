@@ -1,4 +1,6 @@
-# freeCodeCamp Interview Preparation
+# AppTime! Homework Lessons
+
+### WIP
 
 This app was adapted from [this quiz app](https://github.com/bonham000/react-quiz-app) and provides a practice testing and development environment for freeCodeCamp's multiple-choice interview questions.
 

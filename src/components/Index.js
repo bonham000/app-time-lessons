@@ -8,20 +8,13 @@ import { mapScreenSizeToProps } from '../utils/helpers';
 /* Header Component */
 const renderHeader = (isDesktop) => (
 	<div className='header'>
-		<a
-			target="_blank"
-			rel="noopener noreferrer"
-			className="fccLink"
-			href="http://freecodecamp.com/">
-			<img src="/assets/freeCodeCamp.png" alt="freeCodeCamp Logo" />
-		</a>
-		<span>Interview Preparation</span>
+		<span>App Time!📲 Lessons</span>
 			{isDesktop && <a
 				target="_blank"
 				rel="noopener noreferrer"
 				className="contributeLink"
-				href="https://github.com/freeCodeCamp/multiple-choice-questions">
-				Contribute <i className='fa fa-github'></i>
+				href="https://github.com/bonham000/app-time-lessons">
+				View Source <i className='fa fa-github'></i>
 		</a>}
 	</div>
 );

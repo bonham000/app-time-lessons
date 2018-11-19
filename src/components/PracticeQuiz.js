@@ -176,14 +176,8 @@ export default class Quiz extends React.Component {
 
 						<div className='quizHeader'>
 							<div className='quizTitle'>
-								<a
-									target="_blank"
-									rel="noopener noreferrer"
-									className="fccLink"
-									href="http://freecodecamp.com/">
-									<img src="/assets/freeCodeCamp.png" alt="freeCodeCamp Logo" />
-								</a>
-								<span>{quiz.get('title')}</span>
+								<span>{quiz.get('title')} Quiz</span>
+								<span style={{ marginLeft: 10 }}>📕</span>
 							</div>
 							{!this.state.complete
 								? <h3 className='quizMeta'>Question {index + 1} of {numberOfQuestions}</h3>

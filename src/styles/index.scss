@@ -1,14 +1,17 @@
 
 /* freeCodeCamp theme colors: */
 
-$green: #007E00;
-$darkGreen: #006400;
+$green: #42DB9D;
+$darkGreen: #00BF72;
 $lightBlue: #2DB9FF;
-$lightRed: #FF6D58;
+$lightRed: #E60036;
+$lightPink: #FF5864;
 $yellow: #FFEE18;
 $black: #2A2A2A;
 $grey: #E0E0E0;
-$darkGrey: #939393;
+$darkGrey: #2A2A2A;
+$lightGrey: #595555;
+$gold: #FFE37A;
 
 /* Admittedly, the styles are kind of all over the place.
  Refactoring and reorganizing this thing would be great. */
@@ -41,7 +44,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	text-align: left;
 	background: $darkGreen;
 	display: flex;
@@ -59,9 +62,9 @@ body {
 	}
 	.contributeLink {
 		position: absolute;
-		height: 50px;
+		height: 60px;
 		right: 0;
-		padding: 3px 15px 0 15px;
+		padding: 8px 15px 0 15px;
 		color: white;
 		text-decoration: none;
 		i {
@@ -71,6 +74,7 @@ body {
 			text-decoration: none;
 			background: white;
 			color: $green;
+			border-bottom: 1px solid $green;
 		}
 	}
 }
@@ -188,7 +192,7 @@ body {
 			top: 0;
 			width: 100%;
 			height: 60px;
-			border-bottom: 1px solid $black;
+			// border-bottom: 1px solid $black;
 			background: $darkGreen;
 			color: white;
 			font-family: 'Lato', sans-serif;
@@ -290,11 +294,11 @@ body {
 			cursor: default;
 		}
 		#correctWinner {
-			background: $green;
+			background: $darkGreen;
 			color: white;
 		}
 		#wrongWinner {
-			background: $lightRed;
+			background: $lightGrey;
 			color: white;
 		}
 		#correctLoser {

@@ -22,13 +22,7 @@ class About extends React.Component {
 				<div className='studyContainer'>
           <div className='quizHeader'>
             <div className='quizTitle'>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fccLink"
-                href="http://freecodecamp.com/">
-                <img src="/assets/freeCodeCamp.png" alt="freeCodeCamp Logo" />
-              </a>
+            <span>About</span>
             </div>
             {!screen.isMobile && <span id="return">
               <Link to='/'>
@@ -37,20 +31,16 @@ class About extends React.Component {
             </span>}
           </div>
           <div className='about'>
-            <h1>About freeCodeCamp Interview Preparation</h1>
-            <p>You can practice your knowledge of various programming topics through
-              multiple choice quizzes here.</p>
-            <p>These quizzes are being designed to cover a variety of subjects that otherwise
-              are hard to teach through coding challenges. They are specifically targeted
-              toward common programming interview questions.</p>
-            <p>This is a standalone app but the content is part of freeCodeCamp's core curriculum.
-              It is being actively developed and your feedback or contributions are very welcome.
+            <h1>App Time!™ Practice Lessons 🤹‍♂️</h1>
+            <p>These are weekly review quizzes for the content we cover in class.</p>
+            <p>The questions should be simply and easy but enough to keep the concepts fresh in your mind.</p>
+            <p>Spaced repetition is the key to learning. 😃
             </p>
             <button className='aboutContribute'>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/freeCodeCamp/multiple-choice-questions">
+                href="https://github.com/bonham000/app-time-lessons">
                 Contribute</a>
             </button><br />
             <Link className='finishBtn' to='/'>
