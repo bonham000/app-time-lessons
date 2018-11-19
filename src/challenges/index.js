@@ -6,11 +6,9 @@
  */
 
 import javascript from './01_javascript';
-import algorithms from './03_algorithms';
 
 const challenges = [
 	javascript,
-	algorithms,
 ];
 
 /* This doesn't cover everything but serves as a basic verification that

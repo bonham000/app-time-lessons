@@ -133,7 +133,7 @@ class extends React.Component {
 								<i className='fa fa-search'></i>
 							</Link>
 							<Link to={`/practice/${title}`} className={renderClassName(index)} onMouseEnter={this.onHover}>
-								{title} <span>({challenges.size} questions)</span>
+								{quiz.get("title")} <span>({challenges.size} questions)</span>
 							</Link>
 						</div>
 					)
