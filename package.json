@@ -2,10 +2,15 @@
   "name": "fcc-multiple-choice",
   "version": "0.0.1",
   "private": true,
-  "devDependencies": {
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.0.2",
-    "react-scripts": "1.0.3"
+  "scripts": {
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "deploy": "npm run build && cd build/ && surge ./ --domain app-time-lessons.surge.sh",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.16.1",
@@ -18,14 +23,9 @@
     "react-screen-size": "^1.0.1",
     "redux": "^3.6.0"
   },
-  "scripts": {
-    "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
-    "deploy": "npm run build && cd build/ && surge ./ --domain fcc-quiz.surge.sh",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.3"
   }
 }
