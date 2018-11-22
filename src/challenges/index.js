@@ -5,10 +5,12 @@
  * the content of these challenges.
  */
 
-import javascript from './01_javascript';
+import week_1 from './01';
+import week_2 from './02';
 
 const challenges = [
-	javascript,
+	week_1,
+	week_2,
 ];
 
 /* This doesn't cover everything but serves as a basic verification that
