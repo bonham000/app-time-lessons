@@ -6,41 +6,33 @@ const end = `</code></pre>`;
 /***********************************
  * Create Code Snippets
  *********************************** */
-
-const FUNCTION_PARAMETERS = {
+const TODO_LIST = {
 snippet:`
-${start}function add(a, b) {
-	return a + b;
-};
+${start}const myTodoList = [
+  "Learn about coding",
+  "Do the homework for App Time!",
+  "Review what I learned",
+];
 ${end}`
 };
 
-const GREETING = {
+const NOTES = {
 snippet:`
-${start}function sayHello(name) {
-	return "Hello, " + name + "!";
-};
+${start}
+let notes = [];
 
-sayHello("Ryan");
-${end}`
-};
-
-const FUNC = {
-snippet:`
-${start}function performMath(firstValue, secondValue) {
-	var multiplier = 10;
-
-	return (firstValue + secondValue) * multiplier;
+function addNote(myNewNote) {
+	notes.push(myNewNote);
 };
 	
-performMath(3, 4);
+addNote("My secret note");
 ${end}`,
 choices: [
-"<code>7</code>",
-"<code>12</code>",
-"<code>17</code>",
-"<code>70</code>",
-"<code>170</code>",
+"<code>[\"My secret note\"]</code>",
+"<code>[]</code>",
+"<code>[\"\"]</code>",
+"<code>undefined</code>",
+"<code>\"My secret note\"</code>",
 ]};
 
 /***********************************
@@ -71,67 +63,67 @@ export default {
         stored in a variable later in your program, you can use the <code>let</code> keyword.`
     },
     {
-    	title: `In the following function, <code>a</code> and <code>b</code> are referred to as: ${FUNCTION_PARAMETERS.snippet}`,
+    	title: `What is the right what to describe the following? ${TODO_LIST.snippet}`,
     	subtitle: `JavaScript Programming Styles`,
     	choices: [
-				"Letters",
-				"Arguments/Parameters",
-				"Keywords",
-				"Types",
-    	],
-    	solution: `1`,
-			explanation: `
-				In the above function, <code>a</code> and <code>b</code> are function arguments. These are
-				passed into the function when it is called, and generally they are referred to as
-				"arguments" or "parameters".`
-		},
-		{
-    	title: `In the following function, what will be the output of the line <code>sayHello("Ryan")</code>? ${GREETING.snippet}`,
-    	subtitle: `Function return`,
-    	choices: [
-				"Ryan",
-				"Hello, Ryan",
-				"Hello, Ryan!",
-				"undefined",
-    	],
-    	solution: `2`,
-			explanation: `
-				The function takes the argument <code>name</code> and concatenates it with "Hello " and an
-				exclamation mark <code>"!"</code>. The line <code>sayHello("Ryan")</code> calls the <code>sayHello</code>
-				function and passes the string <code>"Ryan"</code> as an argument - this string value goes into
-				the <code>name</code> argument of the function, which then outputs the string <code>"Hello, Ryan!"</code>.`
-		},
-		{
-    	title: `JavaScript, like other languages have special reserved words, like <code>function</code>, <code>return</code>, <code>true</code>. What is the name for these special reserved words?`,
-    	subtitle: `Language keywords`,
-    	choices: [
-				"Keywords",
-				"Specials",
-				"Reserved Words",
-				"They do not have a special name.",
+				"<code>myTodoList</code> is an array of strings",
+        "<code>myTodoList</code> is a function which takes multiple arguments",
+        "None of these are correct",
+        "<code>myTodoList</code> is a string",
+        "I don't know",
     	],
     	solution: `0`,
 			explanation: `
-				These words are called "keywords" and they are reserved by the language to have special meaning.
-				For instance, <code>function</code> denotes a function definition, and <code>return</code> is a keyword
-				to indicate you are returning a value from a function.<br /><br />Learning the meaning and usage of these lanugage
-				keywords will help you understand programming code whn you are looking at it. In general, there are not
-				that many keywords in a language.`
+        Here, <code>myTodoList</code> is declared using <code>const</code> as an array of strings. This
+        is just like the notebook we saw in class, except here the notes are all todo items 🤗`
 		},
 		{
-    	title: `In the following function, what will be the output of the line <code>performMath(3, 4)</code>? ${FUNC.snippet}`,
-    	subtitle: `Perform math`,
-    	choices: FUNC.choices,
-    	solution: `3`,
+    	title: `After the following code runs, what will the variable <code>notes</code> look like? ${NOTES.snippet}`,
+    	subtitle: `Function return`,
+    	choices: NOTES.choices,
+    	solution: `0`,
 			explanation: `
-				This function uses a new keyword we have not learned yet called <code>var</code>! This keyword
-				stands for "variable" and allows you to assign values. In this case, the value <code>10</code>
-				is assigned to the variable <code>multiplier</code>.<br /><br />Then, we perform some math in
-				the function body. Programming languages usually have support for common math operations, just
-				like you are used to with a calculator. So here, we add the arguments <code>firstValue</code>
-				and <code>secondValue</code> together, and then multiple the result by the <code>multiplier</code>
-				variable, <code>10</code>, to get <code>70</code>!<br /><br />Don't worry, you do not have to be
-				good at math to learning programming 😉`
+        The function takes the argument <code>addNote</code> takes one argument, <code>myNewNote</code> and pushes
+        this argument onto the array of notes defined in the variable <code>notes</code>. Therefore, after running the line
+        <code>addNote("My secret note");</code> the <code>notes</code> array will be an array of one value: the string value
+        <code>"My secret note"</code>.`
+		},
+		{
+    	title: `In this line: <code>myArray.push</code>, the <code>.push</code> is usually referred to as a "method".`,
+    	subtitle: `Language keywords`,
+    	choices: [
+				"True",
+				"False",
+				"I don't know",
+    	],
+    	solution: `0`,
+			explanation: `
+        In this example <code>.push</code> is referred to as a "method". Data structures in programming languages usually
+        provide "methods" for programmers to manipulate, copy, read, or change them or their data. These methods are usually
+        accessed with the "dot syntax", like we see here <code>.push</code><br /><br /> Methods allow you to do something, so
+        they are all functions. However, the word "method" is more descriptive because it tells you it is a method on some
+        data structure, whereas the word function does not imply this. You can write functions anywhere in your code, but
+        methods are always attached to some data structure.`
+		},
+		{
+    	title: `Which is the right keyword to use to define a variable which you know you want to change the value of later?`,
+    	subtitle: `Const vs. Let`,
+    	choices: [
+        "<code>let</code>",
+        "<code>var</code>",
+        "<code>const</code>",
+        "<code>function</code>",
+        "None of these",
+      ],
+    	solution: `0`,
+      explanation: `
+        If you want to change the value of a variable, you should use the <code>let</code> keyword. Technically,
+        <code>var</code> will also allow you to do this, but generally using <code>var</code> is avoided in modern
+        JavaScript.<br /><br />There are a few more details about using <code>const</code> and <code>let</code>,
+        but just remember to try to always use <code>const</code> first and then if you decide you need to
+        change the value of some variable you can use <code>let</code> instead. If you follow this rule you will
+        do great! 🙏
+				`
     },
 	]
 };
