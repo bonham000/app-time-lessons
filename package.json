@@ -13,7 +13,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "immutable": "^3.8.1",
     "prismjs": "^1.6.0",
     "react": "^15.5.4",
